@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    if (location.search.substr(1) == 'success') {
+        $('.alert').show();
+    }
+
     $.ajax({
         url: "http://162.55.11.151:8008/api/product",
         method : 'GET',
@@ -15,7 +19,7 @@ $(document).ready(function () {
                         <img src="${product.picture_path}" alt="${product.title}" />
                         <h1> ${product.title} </h1>
                         <p class="price"> ${product.price.toLocaleString()} تومان </p>
-                        <p class="payable"> ${product.payable.toLocaleString()} تومان </p>
+                        <p class="payable"> ${Math.round(product.payable).toLocaleString()} تومان </p>
                         <p> ${product.description} </p>
                         <span> ${product.discount}% </span>
                         <div class="actions">

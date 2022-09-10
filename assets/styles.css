@@ -5,6 +5,16 @@ body {
     background-color: #f0f0f0;
 }
 
+.alert {
+    background-color: lightgreen;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid darkgreen;
+    margin: 30px;
+    font-size: 1.33rem;
+    display: none;
+}
+
 .heading {
     text-align: center;
     margin-bottom: 25px;
@@ -31,6 +41,7 @@ body {
     border-radius: 12px;
     box-shadow: 2px 2px 8px #ccc;
     position: relative;
+    max-width: 200px;
 }
 
 .products .product img {
@@ -72,4 +83,33 @@ body {
 
 .products .product .actions .delete {
     color: red;
+}
+
+
+form {
+    background-color: #fff;
+    margin: 25px;
+    padding: 25px;
+    border: 2px solid #000;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+form input, form textarea {
+    display: block;
+    width: 100%;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form .form-group:last-child {
+    width: 100%;
 }
